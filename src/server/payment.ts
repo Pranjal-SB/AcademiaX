@@ -15,13 +15,15 @@ export async function createPaymentLink(userInfo: PaymentUserInfo) {
       amount: 2000,
       currency: "INR",
       accept_partial: false,
-      description: "AcademiaX Subscription",
+      description: "Subscription",
       customer: {
         name: userInfo.name,
         contact: userInfo.contact,
         email: userInfo.email,
       },
-      callback_url: "https://academiax.in/app/timetable",
+      // Use a relative callback path; the actual host will be resolved by the
+      // payment provider when redirecting back to your app.
+      callback_url: "/app/timetable",
       callback_method: "get",
     });
 

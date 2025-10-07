@@ -1,6 +1,6 @@
 {
-  "name": "AcademiaX",
-  "short_name": "AcademiaX",
+  "name": "Student Portal",
+  "short_name": "StudentPortal",
   "description": "Discover a sleek and modern way to manage your academics - no clutter, just clarity.",
   "id": "/app/timetable",
   "start_url": "/app/timetable",

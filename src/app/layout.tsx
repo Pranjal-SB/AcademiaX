@@ -18,21 +18,21 @@ const geistMono = Geist_Mono({
 const description =
   "Discover a sleek and modern way to manage your academics - no clutter, just clarity.";
 export const metadata: Metadata = {
-  title: "AcademiaX SRM",
+  title: "SRM Portal",
   description,
   authors: [{ name: "jackwaghan", url: "https://jackwaghan.com" }],
-  keywords: ["SRM", "Academia", "AcademiaX", "AcademiaX SRM", "SRM Academia"],
+  keywords: ["SRM", "Academia", "Student Portal", "SRM Academia"],
   openGraph: {
-    title: "AcademiaX",
+    title: "SRM Portal",
     description,
-    url: "https://academiax.in",
-    siteName: "AcademiaX",
+    url: "/",
+    siteName: "SRM Portal",
     images: [
       {
-        url: "https://academiax.in/Landing/BigScreen.png",
+        url: "/Landing/BigScreen.png",
         width: 1200,
         height: 630,
-        alt: "AcademiaX",
+        alt: "SRM Portal",
         type: "image/png",
       },
     ],
@@ -40,16 +40,16 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    site: "@academiax",
-    title: "AcademiaX",
+    site: "@srm",
+    title: "SRM Portal",
     description,
     creator: "@jackwaghan",
     images: [
       {
-        url: "https://academiax.in/Landing/BigScreen.png",
+        url: "/Landing/BigScreen.png",
         width: 1200,
         height: 630,
-        alt: "AcademiaX",
+        alt: "SRM Portal",
         type: "image/png",
       },
     ],

@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: "/app/",
     },
-    sitemap: "https://academiax.in/sitemap.xml",
+    sitemap: "/sitemap.xml",
   };
 }

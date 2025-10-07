@@ -2,7 +2,7 @@ import { Metadata } from "next";
 export const runtime = "edge";
 export const metadata: Metadata = {
   title: "Subscription",
-  description: "AcademiaX Subscription",
+  description: "Subscription",
 };
 
 export default async function RootLayout({

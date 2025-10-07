@@ -3,18 +3,18 @@ export const runtime = "edge";
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: "https://academiax.in",
+      url: "/",
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 1,
-      images: ["https://academiax.in/Landing/BigScreen.png"],
+      images: ["/Landing/BigScreen.png"],
     },
     {
-      url: "https://academiax.in/auth/login",
+      url: "/auth/login",
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 1,
-      images: ["https://academiax.in/Landing/BigScreenLogin.png"],
+      images: ["/Landing/BigScreenLogin.png"],
     },
   ];
 }
