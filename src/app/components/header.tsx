@@ -9,9 +9,7 @@ const Header = ({ value }: { value: string }) => {
         <div className="absolute inset-0 bg-blue-400/30 blur-3xl -z-10 " />
         <div className="flex gap-4 items-center justify-center">
           <Image loading="lazy" src={Icon} width={25} height={25} alt="icon" />
-          <h1 className="text-lg tracking-wide">
-            Student Portal <span className="text-white/50 text-sm ">v2</span>
-          </h1>
+          <h1 className="text-lg tracking-wide">Student Portal</h1>
         </div>
         {value !== "root" ? (
           <Link
