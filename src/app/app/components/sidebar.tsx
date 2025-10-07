@@ -27,10 +27,9 @@ const Sidebar = () => {
     <div className="relative h-full w-full flex flex-col rounded-lg bg-black/30 apply-border-md shadow ">
       <Header />
       <Menu />
-      {/* <Status /> */}
-      {/* <Footer /> / */}
-      {/* <div className="absolute inset-0 bg-blue-500/30 blur-3xl -z-50"></div> */}
-      <Author />
+  {/* <Status /> */}
+  {/* <Footer /> */}
+  {/* <div className="absolute inset-0 bg-blue-500/30 blur-3xl -z-50"></div> */}
       {/*<Footer />*/}
     </div>
   );
@@ -124,29 +123,7 @@ const Menu = () => {
   );
 };
 
-const Author = () => {
-  return (
-    <div className="w-full p-4 h-fit">
-      <div
-        onClick={() => {
-          window.open("https://www.linkedin.com/in/jackwaghan/", "_blank");
-        }}
-        className="text-white/60 text-sm w-full h-full bg-background rounded-lg border-2 border-dotted border-slate-300/10 flex flex-col gap-4 justify-center p-4 apply-hover-scale cursor-pointer"
-      >
-        <div className="flex items-center justify-between ">
-          <h1 className="flex gap-2 items-center justify-center ">
-            <span>❤️</span>
-            Built by Student
-          </h1>
-          <CiShare1 className="w-4 h-4 text-blue-400" />
-        </div>
-        <h2 className=" capitalize font-mono text-white/40">
-          -- Jack Waghan <span>👋</span>
-        </h2>
-      </div>
-    </div>
-  );
-};
+// Author box removed as requested
 // const Status = () => {
 //   const item = [
 //     { name: "timetable", query: useTimetable() },
