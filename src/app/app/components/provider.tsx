@@ -8,18 +8,11 @@ import { createAsyncStoragePersister } from "@tanstack/query-async-storage-persi
 import { persistQueryClient } from "@tanstack/react-query-persist-client";
 import { useScreen, useSidebar } from "@/hooks/zustand";
 import { usePathname, useRouter } from "next/navigation";
-import {
-  CreditCard,
-  Github,
-  Loader,
-  LogOut,
-  PanelRightOpen,
-  ShieldAlert,
-} from "lucide-react";
+import { Loader, LogOut, PanelRightOpen } from "lucide-react";
 import { SidebarToggle } from "@/utils/sidebarToggle";
 import { useUserInfo } from "@/hooks/query";
 import Loading from "../loading";
-import { DiNpm } from "react-icons/di";
+// removed external links icons (GitHub/NPM/Help)
 import Link from "next/link";
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -182,69 +175,7 @@ const ProfileDrop = ({
       ref={dropRef}
       className="absolute top-14 right-0 w-48  bg-white/5 backdrop-blur-lg rounded-lg border border-white/5 z-50 flex flex-col shadow-2xl overflow-hidden "
     >
-      {/* Subscription link removed */}
-
-      <a
-        href="https://github.com/jackwaghan/AcademiaX"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="w-full px-4 py-3 flex justify-between items-center font-medium hover:bg-white/10 transition-colors focus:outline-none border-b border-white/5"
-        onClick={(e) => {
-          if (window.matchMedia("(display-mode: standalone)").matches) {
-            e.preventDefault();
-            window.open(
-              "https://github.com/jackwaghan/AcademiaX",
-              "_blank",
-              "noopener,noreferrer"
-            );
-          }
-        }}
-      >
-        <span>GitHub</span>
-        <span>
-          <Github className="w-5 h-5" />
-        </span>
-      </a>
-      <a
-        href="https://www.npmjs.com/package/srm-academia-api"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="w-full px-4 py-3 flex justify-between items-center font-medium hover:bg-white/10 transition-colors focus:outline-none border-b border-white/5"
-        onClick={(e) => {
-          if (window.matchMedia("(display-mode: standalone)").matches) {
-            e.preventDefault();
-            window.open(
-              "https://www.npmjs.com/package/srm-academia-api",
-              "_blank",
-              "noopener,noreferrer"
-            );
-          }
-        }}
-      >
-        <span>Npm Package</span>
-        <span>
-          <DiNpm className="w-6 h-6" />
-        </span>
-      </a>
-      <a
-        href="https://chat.whatsapp.com/B6a15jYEKgI1UD7QzX39cM"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="w-full px-4 py-3 flex justify-between items-center font-medium hover:bg-white/10 transition-colors focus:outline-none border-b border-white/5"
-        onClick={(e) => {
-          e.preventDefault();
-          window.open(
-            "https://chat.whatsapp.com/B6a15jYEKgI1UD7QzX39cM",
-            "_blank",
-            "noopener,noreferrer"
-          );
-        }}
-      >
-        <span>Need Help</span>
-        <span>
-          <ShieldAlert className="w-5 h-5" />
-        </span>
-      </a>
+      {/* Removed external links (GitHub, NPM, Need Help) as requested */}
       <a
         href="/auth/logout"
         className="w-full px-4 py-3 flex justify-between items-center font-medium text-red-400 hover:bg-white/10 transition-colors focus:outline-none"
