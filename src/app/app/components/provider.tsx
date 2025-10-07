@@ -21,7 +21,6 @@ import { useUserInfo } from "@/hooks/query";
 import Loading from "../loading";
 import { DiNpm } from "react-icons/di";
 import Link from "next/link";
-import { getPaymentClient } from "@/utils/getCookieClient";
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
@@ -108,23 +107,6 @@ const MenuBar = () => {
   const router = useRouter();
   const [daysLeft, setDaysLeft] = useState<number | null>(null);
 
-  useEffect(() => {
-    getDaysLeft();
-  }, []);
-
-  async function getDaysLeft() {
-    const data = await getPaymentClient();
-    if (data) {
-      const date = new Date(data?.created_at * 1000);
-      const currentDate = new Date();
-      const daysPassed = Math.floor(
-        (currentDate.getTime() - date.getTime()) / (1000 * 60 * 60 * 24)
-      );
-      setDaysLeft(Math.max(0, 30 - daysPassed));
-    } else {
-      setDaysLeft(0);
-    }
-  }
 
   return (
     <div className="min-h-14 px-4 justify-between items-center flex text-lg  border-b border-slate-400/10">
@@ -137,23 +119,7 @@ const MenuBar = () => {
         <span className="capitalize">{path[path.length - 1]}</span>
       </span>
       <div className="flex items-center justify-center gap-4">
-        <div
-          onClick={() =>
-            path[path.length - 1] !== "subscription" &&
-            router.push("/app/subscription")
-          }
-          className="text-sm  hover:cursor-pointer hover:scale-[0.97] transition-all duration-300 "
-        >
-          {daysLeft && daysLeft > 0 && daysLeft !== 1 ? (
-            <span className="bg-blue-400/20  border-blue-400/50 border  rounded px-2 py-0.5">
-              {daysLeft} days left
-            </span>
-          ) : (
-            <div className="bg-red-400/20 border-red-400/50 border  rounded px-2 py-0.5">
-              {daysLeft === 1 ? "1 day left" : "Expired"}
-            </div>
-          )}
-        </div>
+        {/* Subscription UI removed */}
         <ProfileIcon />
       </div>
     </div>
@@ -216,15 +182,7 @@ const ProfileDrop = ({
       ref={dropRef}
       className="absolute top-14 right-0 w-48  bg-white/5 backdrop-blur-lg rounded-lg border border-white/5 z-50 flex flex-col shadow-2xl overflow-hidden "
     >
-      <Link
-        href="/app/subscription"
-        className="w-full px-4 py-3 flex justify-between items-center font-medium hover:bg-white/10 transition-colors focus:outline-none border-b border-white/5"
-      >
-        <span>Subscription</span>
-        <span>
-          <CreditCard className="w-5 h-5" />
-        </span>
-      </Link>
+      {/* Subscription link removed */}
 
       <a
         href="https://github.com/jackwaghan/AcademiaX"
