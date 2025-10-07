@@ -121,10 +121,6 @@ export const LoginComponent = () => {
         <div className="flex items-center justify-center min-h-20 lg:text-4xl h-full text-2xl ">
           Login
         </div>
-        <h1 className="absolute -top-20 left-1/2 -translate-x-1/2  text-sm lg:text-lg w-full flex items-center justify-center text-white/50">
-          Note: This is an unofficial student-built wrapper for SRM Academia.
-          Please use it responsibly.
-        </h1>
         <div className="w-full h-full flex items-center justify-center ">
           <form
             onSubmit={HandleSubmit}
@@ -183,14 +179,7 @@ export const LoginComponent = () => {
             </button>
           </form>
         </div>
-        <a
-          href="https://academia.srmist.edu.in/reset"
-          target="_blank"
-          rel="noopener"
-          className="absolute -bottom-20 left-1/2 -translate-x-1/2  px-3 py-1 apply-border-sm bg-white/5 rounded text-sm"
-        >
-          Forget Password ?
-        </a>
+        {/* Note and forgot-password link removed as requested */}
       </div>
     </div>
   );
